@@ -2,7 +2,7 @@
 
 ### 💖 Vanilla JS Bible reference parser. 📜 Fast. Cross-browser compatible. Supports IE6+
 
-**Demo:** https://gryleader.github.io/catholic%20bible%20parser/lib/parser-demo.html
+**Visit the Demo:** https://gryleader.github.io/catholic-bible-parser/lib/parser-demo.html
 
 How to use:
 
