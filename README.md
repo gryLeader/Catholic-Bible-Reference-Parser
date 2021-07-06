@@ -1,6 +1,6 @@
 #  Catholic Bible Reference Parser ✝️
 
-### Vanilla JS Bible reference parser. 📜 Fast. Cross-browser compatible. Supports IE6+
+### 💖 Vanilla JS Bible reference parser. 📜 Fast. Cross-browser compatible. Supports IE6+
 
 **Demo:** https://gryleader.github.io/catholic%20bible%20parser/lib/parser-demo.html
 
@@ -29,14 +29,15 @@ How to use:
 ### parseText(astring, vtype)
 
 **Parameters:**
+
 astring: input string
 
-vtype: string with validation type can be one of "b" "bc" "bcv" or "bcva"
+vtype: (optional. default=bcv) string with validation type can be one of "b" "bc" "bcv" or "bcva"
 
-	* b: validates book names and prefix number      
-	* bc: also validates chapter numbers
-	* bcv: also validates verse numbers
-	* bcva: also validates "addendum" verses e.g. Genesis 1:4-7.9.11 (".9.11")
+- b: validates book names and prefix number      
+- bc: also validates chapter numbers
+- bcv: also validates verse numbers
+- bcva: also validates "addendum" verses e.g. Genesis 1:4-7.9.11 (".9.11")
       
 **Result** 
 
