@@ -1,31 +1,27 @@
-# Catholic Bible Reference Parser
+#  Catholic Bible Reference Parser ✝️
 
-### Vanilla JS Bible reference parser. Fast. Cross-browser compatible. Supports IE6+
+### Vanilla JS Bible reference parser. 📜 Fast. Cross-browser compatible. Supports IE6+
 
 **Demo:** https://gryleader.github.io/catholic%20bible%20parser/lib/parser-demo.html
 
 How to use:
 
-1. Add the library scripts to your HTML file (commonly in the head section)
+1️⃣  Add the library scripts to your HTML file (commonly in the head section)
 
 ```javascript
 <script type="text/javascript" src="biblebooks.js"></script>
 <script type="text/javascript" src="bibleparser.js"></script>
 ```
 
-2 . Create a new BibleParser object and call its parseText() method:
+2️⃣ Create a new **BibleParser** object and call its *parseText()* method:
 
 ```javascript
 <script type="text/javascript">
-	var bp = new BibleParser();
-	//use allowsections if you want to enable capture of verse sections (e.g. Genesis 2:12ab)   
-	// if true verse == "12ab"	if false (default) verse == "12"
-	bp.allowsections = true;	
+	var bp = new BibleParser();		
 	
 	if (bp.parseText(astring, vtype)) {
-	//bp.validRefs now contains an array of objects with the references found in astring
-		
-	alert(bp.validRefs[0].ref);
+		//bp.validRefs now contains an array of objects with the references found in astring		
+		alert(bp.validRefs[0].ref);
 	}	
 </script>
 ```
@@ -37,10 +33,10 @@ astring: input string
 
 vtype: string with validation type can be one of "b" "bc" "bcv" or "bcva"
 
-	*b: validates book names and prefix number      
-	*bc: also validates chapter numbers
+	* b: validates book names and prefix number      
+	* bc: also validates chapter numbers
 	* bcv: also validates verse numbers
-	*bcva: also validates "addendum" verses e.g. Genesis 1:4-7.9.11 (".9.11")
+	* bcva: also validates "addendum" verses e.g. Genesis 1:4-7.9.11 (".9.11")
       
 **Result** 
 
@@ -71,7 +67,17 @@ validRefs[1]: {
 ...
 ```
 
-### Other methods:
+### More info and Other methods:
+
+**allowsections** property
+
+Set allowsections to true after creating a BibleParser object if you want to enable capturing of verse section letters "12ab" in (Genesis 2:12ab).
+
+```javascript
+//use allowsections if you want to enable capture of verse sections (e.g. Genesis 2:12ab)   
+// if true verse == "12ab"	if false (default) verse == "12"
+bp.allowsections = true;
+```
 
 **hasRefs()**
 
