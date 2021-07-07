@@ -1,8 +1,8 @@
 #  Catholic Bible Reference Parser ✝️
 
-### 💖 Vanilla JS Bible reference parser. 📜 Fast. Cross-browser compatible. Supports IE6+
+## 💖 Vanilla JS Bible reference parser. 📜 Fast. Cross-browser compatible. Supports IE6+
 
-**Visit the Demo:** https://gryleader.github.io/catholic-bible-parser/lib/parser-demo.html
+**Visit the Demo page:** https://gryleader.github.io/catholic-bible-parser/lib/parser-demo.html
 
 How to use:
 
@@ -19,7 +19,7 @@ How to use:
 <script type="text/javascript">
 	var bp = new BibleParser();		
 	
-	if (bp.parseText(astring, vtype)) {
+	if (bp.parseText(astring)) {
 		//bp.validRefs now contains an array of objects with the references found in astring		
 		alert(bp.validRefs[0].ref);
 	}	
@@ -32,12 +32,12 @@ How to use:
 
 astring: input string
 
-vtype: (optional. default=bcv) string with validation type can be one of "b" "bc" "bcv" or "bcva"
+vtype: (optional. default="bcv") string with validation type can be one of "b" "bc" "bcv" or "bcva"
 
-- b: validates book names and prefix number      
-- bc: also validates chapter numbers
-- bcv: also validates verse numbers
-- bcva: also validates "addendum" verses e.g. Genesis 1:4-7.9.11 (".9.11")
+- "b": validates book names and prefix number      
+- "bc": also validates chapter numbers
+- "bcv": also validates verse numbers
+- "bcva": also validates "addendum" verses e.g. Genesis 1:4-7.9.11 (".9.11")
       
 **Result** 
 
@@ -72,7 +72,7 @@ validRefs[1]: {
 
 **allowsections** property
 
-Set allowsections to true after creating a BibleParser object if you want to enable capturing of verse section letters "12ab" in (Genesis 2:12ab).
+Set allowsections to true after creating a BibleParser object if you want to include verse section letters in verses e.g. "12ab" in (Genesis 2:12ab). *(This property doesn't affect validation, only affects the string of the verses.)*
 
 ```javascript
 //use allowsections if you want to enable capture of verse sections (e.g. Genesis 2:12ab)   
@@ -92,3 +92,10 @@ Returns the number of valid references parsed and saved in validRefs after a cal
 
 Returns a formatted HTML string with all the references and their data.
 
+## Support / Tips
+
+[![paypal](https://github.com/gryLeader/gryleader.github.io/blob/Main/imgs/paypalme.png)](https://paypal.me/EzequielMayan)
+
+Thanks for your support! It will allow me to continue developments and start new projects. Blessings.
+
+*«I will bless them that bless thee, and curse them that curse thee, and in thee shall all the families of the earth be blessed.»* (Gen. 12:3)
