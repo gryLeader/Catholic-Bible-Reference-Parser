@@ -103,6 +103,10 @@ Returns the number of valid references parsed and saved in validRefs after a cal
 
 Returns a formatted HTML string with all the references and their data.
 
+### Localization
+
+For localization follow the instructions in file *biblebooks.js*.
+
 ## Support / Tips
 
 [![paypal](https://github.com/gryLeader/gryleader.github.io/blob/Main/imgs/paypalme.png)](https://paypal.me/EzequielMayan)
