@@ -88,7 +88,7 @@ Given a string, a language locale (default "en") and a mode (1 for short book na
 
 ```javascript
 //assumes there is an instance of BibleParser object named bp
-document.getElementById("Myparagraph1").innerHTML = bp.normalizeRefs(document.getElementById("Myparagraph1").innerHTML, "en", 1);
+var myString = bp.normalizeRefs(document.getElementById("Myparagraph1").innerHTML, "en", 1);
 ```
 
 **hasRefs()**
@@ -106,6 +106,7 @@ Returns a formatted HTML string with all the references and their data.
 ### Localization
 
 For localization follow the instructions in file *biblebooks.js*.
+It supports English and Spanish language by default, and you don't need to do anything if you only need those languages.
 
 ## Support / Tips
 
