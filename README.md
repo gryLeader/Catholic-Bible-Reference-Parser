@@ -42,7 +42,7 @@ vtype: (optional. default="bcv") string with validation type can be one of "b" "
 **Result** 
 
 Boolean: true or false. Returns true if it found at least one valid reference.
-The references are stored in validRefs property as arrays of objects. This is an example of two references objects:
+The references are stored in validRefs property as array of objects. This is an example of two references objects:
 
 ```javascript
 validRefs[0]: {
@@ -70,14 +70,25 @@ validRefs[1]: {
 
 ### More info and Other methods:
 
-**allowsections** property
+**allowsections** property. *(Default: false)*
 
 Set allowsections to true after creating a BibleParser object if you want to include verse section letters in verses e.g. "12ab" in (Genesis 2:12ab). *(This property doesn't affect validation, only affects the string of the verses.)*
 
 ```javascript
-//use allowsections if you want to enable capture of verse sections (e.g. Genesis 2:12ab)   
+//use allowsections if you want sections (letters) of verses to appear on verses strings (e.g. Genesis 2:12ab)   
 // if true verse == "12ab"	if false (default) verse == "12"
 bp.allowsections = true;
+```
+
+**normalizeRefs(string, lang, mode)**
+
+Given a string, a language locale (default "en") and a mode (1 for short book names, 0 for long book names) it returns the string with the references normalized (uniformly adjusted to the specified format).
+
+*Example:*
+
+```javascript
+//assumes there is an instance of BibleParser object named bp
+document.getElementById("Myparagraph1").innerHTML = bp.normalizeRefs(document.getElementById("Myparagraph1").innerHTML, "en", 1);
 ```
 
 **hasRefs()**
